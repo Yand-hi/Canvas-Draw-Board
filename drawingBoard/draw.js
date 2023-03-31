@@ -1,3 +1,6 @@
+
+import { colorVal } from "./useTools.js";
+console.log(colorVal);
 /** @type {HTMLCanvasElement} */
 
 const canvas = document.querySelector("#canvas")
@@ -26,13 +29,13 @@ canvas.onmousemove = e => {
 canvas.onmouseup = () => {
   painting = false
 }
-
 function startDraw({startX, startY}, x, y) {
   ctx.beginPath()
   ctx.moveTo(startX, startY)
   ctx.lineCap = "round";
   ctx.lineWidth = 2
   ctx.lineTo(x, y)
+  ctx.strokeStyle = colorVal
   ctx.stroke()
   ctx.closePath()
 }

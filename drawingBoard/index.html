@@ -7,13 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>画板</title>
     <link rel="stylesheet" href="style.css">
-    <script async src="./draw.js"></script>
+    <script async src="./draw.js" type="module"></script>
+    <script async src="./useTools.js" type="module"></script>
 </head>
 
 <body>
-    <canvas id="canvas" width="100" height="100">
-        换个浏览器，求你了！
-    </canvas>
+    <div class="canvas-wrapper">
+        <div class="tools">
+            <form action="" class="selector-wrapper">
+                <input type="color" id="colorSelector" name="colorSelector" value="#e66465" onchange="changeColor">
+                <label for="colorSelector" id="colorLabel">#e66465</label>
+            </form>
+        </div>
+        <canvas id="canvas" width="100" height="100">
+            换个浏览器，求你了！
+        </canvas>
+    </div>
 </body>
 
 </html>
