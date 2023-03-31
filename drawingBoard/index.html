@@ -15,8 +15,21 @@
     <div class="canvas-wrapper">
         <div class="tools">
             <form action="" class="selector-wrapper">
-                <input type="color" id="colorSelector" name="colorSelector" value="#e66465" onchange="changeColor">
-                <label for="colorSelector" id="colorLabel">#e66465</label>
+                <input type="color" id="colorSelector" name="colorSelector" value="#e66465">
+                <label for="colorSelector" id="colorLabel" style="color: #e66465">#e66465</label>
+            </form>
+            <span>Canvas 画板</span>
+            <form action="">
+                <label for="px-select">线宽</label>
+                <select id="lineWidthSelector" name="lineWidthSelector" id="px-select">
+                    <option value="1">1 px</option>
+                    <option value="2">2 px</option>
+                    <option value="3" selected>3 px</option>
+                    <option value="4">4 px</option>
+                    <option value="5">5 px</option>
+                    <option value="10">10 px</option>
+                    <option value="12">12 px</option>
+                </select>
             </form>
         </div>
         <canvas id="canvas" width="100" height="100">

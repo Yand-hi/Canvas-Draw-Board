@@ -1,6 +1,5 @@
 
-import { colorVal } from "./useTools.js";
-console.log(colorVal);
+import { colorVal, lineWidth } from "./useTools.js";
 /** @type {HTMLCanvasElement} */
 
 const canvas = document.querySelector("#canvas")
@@ -33,7 +32,7 @@ function startDraw({startX, startY}, x, y) {
   ctx.beginPath()
   ctx.moveTo(startX, startY)
   ctx.lineCap = "round";
-  ctx.lineWidth = 2
+  ctx.lineWidth = lineWidth
   ctx.lineTo(x, y)
   ctx.strokeStyle = colorVal
   ctx.stroke()
