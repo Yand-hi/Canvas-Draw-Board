@@ -7,6 +7,7 @@
     position: relative;
 }
 .tools {
+    transition: all ease-in-out 400;
     position: fixed;
     top: 0;
     left: 50%;
@@ -18,10 +19,25 @@
     height: 60px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
+
 form {
     display: flex;
     align-items: center;
     gap: 6px;
+}
+span#title {
+    position: relative;
+    margin-top: -4px;
+    font-size: 18px;
+}
+span#title > i {
+    transition: all ease-in-out 400ms;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
 }
 #colorSelector {
     cursor: pointer;
@@ -32,4 +48,11 @@ form {
 }
 #canvas {
     display: block;
+}
+.hiddenToolBar {
+    transform: translate(-50%, -60px);
+}
+span#title > .bottomIcon {
+    transform: translate(-50%, 22px) rotateX(180deg);
+    font-size: 20px;
 }

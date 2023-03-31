@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>画板</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3156661_1q8zjf84x79.css">
     <script async src="./draw.js" type="module"></script>
     <script async src="./useTools.js" type="module"></script>
 </head>
@@ -15,10 +16,12 @@
     <div class="canvas-wrapper">
         <div class="tools">
             <form action="" class="selector-wrapper">
-                <input type="color" id="colorSelector" name="colorSelector" value="#e66465">
-                <label for="colorSelector" id="colorLabel" style="color: #e66465">#e66465</label>
+                <input type="color" id="colorSelector" name="colorSelector" value="#000000">
+                <label for="colorSelector" id="colorLabel" style="color: #000000">#000000</label>
             </form>
-            <span>Canvas 画板</span>
+            <span id="title">Canvas 画板
+                <i class="iconfont icon-top" id="toggleIcon"></i>
+            </span>
             <form action="">
                 <label for="px-select">线宽</label>
                 <select id="lineWidthSelector" name="lineWidthSelector" id="px-select">
